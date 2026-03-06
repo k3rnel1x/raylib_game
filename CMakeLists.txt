@@ -15,4 +15,11 @@ add_executable(raylib_game
         src/game.h
         src/main.cpp
         src/game_config.h
+        src/ui/context/context.h
+        src/ui/context/game_context.h
+        src/ui/screens/screens.h
+        src/ui/screens/screens.cpp
+        src/ui/states/states.h
+        src/gameplay/gameplay.h
+        src/gameplay/gameplay.cpp
 )

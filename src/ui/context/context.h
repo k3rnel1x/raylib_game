@@ -1,6 +1,6 @@
 #ifndef CONTEXT_H
 #define CONTEXT_H
 
-typedef struct GameContext  GameContext;
+#include "game_context.h"
 
 #endif

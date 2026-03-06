@@ -6,7 +6,7 @@
 #define GAME_H
 #include <raylib.h>
 #include "game_config.h"
-#include "screens/screens.h"
+#include "ui/screens/screens.h"
 
 class Game {
 private:
@@ -17,6 +17,7 @@ private:
     GameContext*    gctx;  
 public:
     Game();
+    ~Game();
     void init();
     int  run(int argc, char* argv[]);
 };

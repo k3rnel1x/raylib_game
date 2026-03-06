@@ -8,11 +8,12 @@
 Game::Game()
 {
     gctx = new GameContext;
+    gctx->currScr = MAIN_SCR;
 }
 
 Game::~Game()
 {
-    delete GameContext;
+    delete gctx;
 }
 
 void Game::init()
@@ -28,24 +29,20 @@ int Game::run(int argc, char* argv[])
     
     do {
         switch(gctx->currScr){
-        case MAIN_MENU:
-            ctx->currScr = mainScr.show();
+        case MAIN_SCR:
+            mainScr.show(gctx);
             break;
 
-        case SAVES_MENU:
-            savesSrc.setSaves(gctx->saves);
-            ctx->currScr    = savesScr.show();
-            ctx->pickedSave = savesScr.getPickedSave();
+        case SAVES_SCR:
+            savesScr.show(gctx);
             break;
 
-        case PLAY_MENU:
-            playSrc.setSave();
-            ctx->currScr    = playScr.show();
-            ctx->pickedSave = playSrc.getSave()
+        case PLAY_SCR:
+            playScr.show(gctx);
             break;
             
         }
-    } while(ctx->currScr != GAME_EXIT);
+    } while(gctx->currScr != GAME_EXIT);
 
     return 0;
 }

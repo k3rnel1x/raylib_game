@@ -4,9 +4,9 @@
 #include <vector>
 
 typedef enum SCREEN_T {
-    MAIN_MENU,
-    SAVES_MENU,
-    PLAY_MENU,
+    MAIN_SCR,
+    SAVES_SCR,
+    PLAY_SCR,
     GAME_EXIT
 } SCREEN_T;
 
@@ -15,7 +15,7 @@ typedef struct Save {
 } Save;
 
 typedef struct GameContext {
-    SCREEN_T currScr;
+    SCREEN_T  currScr;
     Save*     pickedSave;
     std::vector<Save> saves;
 } GameContext;

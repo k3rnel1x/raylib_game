@@ -16,7 +16,7 @@ void Game::init()
 int Game::run(int argc, char* argv[])
 {
     // Run game
-    while (!WindowShouldClose())
+    while (!(WindowShouldClose() | IsKeyPressed(KEY_Q)))
     {
         BeginDrawing();
             ClearBackground(RAYWHITE);

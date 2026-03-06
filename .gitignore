@@ -1,3 +1,9 @@
+# build
+build/
+
+# VScode
+.vscode
+
 # Jetbrains
 .idea
 

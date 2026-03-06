@@ -1,8 +1,8 @@
-#include "Game.h"
+#include "game.h"
 
 int main(int argc, char* argv[])
 {
-    Game app;
+    Game    app;
     app.init();
     return app.run(argc, argv);
 }

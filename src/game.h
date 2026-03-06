@@ -6,15 +6,19 @@
 #define GAME_H
 #include <raylib.h>
 #include "game_config.h"
+#include "screens/screens.h"
 
 class Game {
 private:
+    MainMenuScreen mainScr;
+    SavesScreen    savesScr;
+    PlayScreen     playScr;
 
+    GameContext*    gctx;  
 public:
+    Game();
     void init();
     int  run(int argc, char* argv[]);
 };
-
-
 
 #endif //GAME_H

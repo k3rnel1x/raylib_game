@@ -10,10 +10,11 @@
 class Gameplay {
 private:
     World world;
-    void parseGameContext(GameContext* gctx);
+
 public:
     Gameplay(Vector2 worldPos = {0,0}) : world(worldPos) { };
-    void run(GameContext* gctx);
+    void setWorld(GameContext* gctx);
+    void run(GameContext *gctx);
 };
 
 #endif //GAMEPLAY_H

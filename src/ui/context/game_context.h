@@ -3,6 +3,8 @@
 
 #include <vector>
 
+#include "gameplay/world/world.h"
+
 typedef enum SCREEN_T {
     MAIN_SCR,
     SAVES_SCR,
@@ -10,9 +12,23 @@ typedef enum SCREEN_T {
     GAME_EXIT
 } SCREEN_T;
 
-typedef struct Save {
+class Save
+{
+public:
+    // World
+    World world;
+    // Player
+    Player player;
 
-} Save;
+    // Map
+    Location map;
+    std::vector<Entity> enemies;
+    std::vector<Entity> peaceful;
+    std::vector<Entity> lifeless;
+    std::vector<Props>  background;
+
+    void buildWorld();
+};
 
 typedef struct GameContext {
     SCREEN_T  currScr;
@@ -20,5 +36,15 @@ typedef struct GameContext {
     std::vector<Save> saves;
 } GameContext;
 
+void Save::buildWorld()
+{
+    map.setBackground(&background);
+    map.setLifeless(&background);
+    map.setEnemies(&enemies);
+    map.setPeaceful(&peaceful);
+
+    world.setMap(&map);
+    world.setPlayer(&player);
+}
 
 #endif

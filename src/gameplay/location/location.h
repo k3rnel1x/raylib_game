@@ -19,21 +19,23 @@ private:
 
     /* Non-actionable */
     std::vector<Props>*  background;
+
 public:
     Location(Vector2 pos);
     /* Set Actionable */
-    void setEnemies(std::vector<Entity>* enemies);
+    void setEnemies (std::vector<Entity>* enemies);
     void setPeaceful(std::vector<Entity>* peaceful);
     void setLifeless(std::vector<Entity>* lifeless);
     /* Get Actionable */
-    std::vector<Entity>* getEnemies();
-    std::vector<Entity>* getPeaceful();
-    std::vector<Entity>* getLifeless();
+    // std::vector<Entity>* getEnemies();
+    // std::vector<Entity>* getPeaceful();
+    // std::vector<Entity>* getLifeless();
 
     /* Set Non-actionable */
     void setBackground(std::vector<Props>*  background);
     /* Get Non-actionable */
-    std::vector<Props>* getBackground();
+    // std::vector<Props>* getBackground();
+
     void draw() override;
 };
 

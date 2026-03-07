@@ -6,8 +6,11 @@
 
 void World::draw()
 {
-    if (player && currLocation && allLocations)
+    if (player && map)
     {
-        // TODO draw all objects in World
+        do{
+            map->draw();
+            player->draw();
+        } while (GetKeyPressed() == KEY_ESCAPE);
     }
 }

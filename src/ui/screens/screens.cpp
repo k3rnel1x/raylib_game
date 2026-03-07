@@ -32,6 +32,7 @@ void SavesScreen::show(GameContext* gctx)
 
 void PlayScreen::show(GameContext* gctx)
 {
+    gameplay.setWorld(gctx);
     gameplay.run(gctx);
 }
 

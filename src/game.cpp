@@ -5,10 +5,11 @@
 #include "game.h"
 #include "game_config.h"
 
-Game::Game()
+Game::Game(std::vector<Save> saves)
 {
     gctx = new GameContext;
     gctx->currScr = MAIN_SCR;
+    gctx->saves = saves;
 }
 
 Game::~Game()

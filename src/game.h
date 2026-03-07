@@ -14,9 +14,9 @@ private:
     SavesScreen    savesScr;
     PlayScreen     playScr;
 
-    GameContext*    gctx;  
+    GameContext*    gctx;
 public:
-    Game();
+    Game(std::vector<Save> saves);
     ~Game();
     void init();
     int  run(int argc, char* argv[]);

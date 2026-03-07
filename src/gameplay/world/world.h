@@ -4,6 +4,7 @@
 
 #ifndef WORLD_H
 #define WORLD_H
+#include <map>
 #include <vector>
 #include "gameplay/kobject/kobject.h"
 #include "gameplay/kobject/entity/entity.h"
@@ -14,14 +15,12 @@
 class World : public KObject {
 private:
     Player* player;
-    Location* currLocation = NULL;
-    std::vector<Location>* allLocations = NULL;
+    Location* map;
 public:
     World(Vector2 worldCoords) : KObject(worldCoords) { };
-
     void setPlayer(Player* player);
-    void setLocation(Location* currLocation);
-    void setAllLocations(std::vector<Location>* allLocations);
+    void setMap(Location* map);
+
     void draw() override;
 };
 

@@ -5,11 +5,12 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 #include "gameplay/kobject/entity/entity.h"
+#include "gameplay/location/location.h"
 
 
 class Player : public Entity {
 public:
-    Player(Vector2 pos) : Entity(pos) { };
+    Player(Vector2 pos) : Entity(pos) { setName("Player"); };
 };
 
 
